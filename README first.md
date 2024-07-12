@@ -1,6 +1,6 @@
 # About
 
-City Hall attachees Netflix Clone project
+City Hall attachment Netflix Clone project
 
 ## NOTICE
 
