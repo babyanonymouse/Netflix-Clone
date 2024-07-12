@@ -1,4 +1,4 @@
-# Netflix-Clone
+# About
 
 City Hall attachees Netflix Clone project
 
