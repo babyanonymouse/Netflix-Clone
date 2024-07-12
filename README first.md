@@ -10,3 +10,8 @@ City Hall attachees Netflix Clone project
 2.  latest version of python (check all the boxes)
 3. Install Docker (extension and app). Sign In with GitHub
 
+### installing .venv environment
+
+1. press ctrl+shift+P then type create virtual environment. 
+    select venv. 
+    select python interpretter
