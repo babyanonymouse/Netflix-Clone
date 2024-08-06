@@ -1,0 +1,60 @@
+
+{%extends 'partials/navbar.html'%}
+{%block content%} 
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+<section class="background-section">
+  <h1>Unlimited movies, TV shows, and more</h1>
+  <p>Watch anywhere. Cancel anytime.</p>
+  <p>Ready to watch? Enter your email to create or restart your membership.</p>
+  <div class="input-group">
+    <input type="email" placeholder="Email address" required />
+    <button type="submit" href="#" class="btn">Get Started</button>
+  </div>
+</section>
+
+<section class="section2 container-default">
+    <div class="container-text">
+      <h2>Enjoy on your TV.</h2>
+      <p>
+        Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+        players, and more.
+      </p>
+    </div>
+    <div class="container-image">
+      <img src="{% static 'images/tv.png' %}" alt="tv" style="margin-right: 300px;"/>
+    </div>
+</section>
+
+<section class="section3">
+
+</section>
+<section class="section4 container-default">
+    <div class="container-image">
+        <img style="margin-left: 190px;"src="{% static 'images/kidsimage.png'%}" alt="tv" />
+    </div>
+    <div class="container-text">
+      <h2>Create profiles for kids</h2>
+      <p>
+        Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+      </p>
+    </div>
+
+</section>
+<section class="section5">
+
+</section>
+<section class="section6">
+
+
+</section>
+
+{% endblock %}
