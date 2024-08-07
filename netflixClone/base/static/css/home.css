@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.background-section {
+    position: relative; 
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    border-bottom: 8px solid rgb(43, 41, 41);
+    background-color: rgba(0, 0, 0, 0.7); 
+
+    overflow: hidden; 
+}
+
+.background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/images/KE-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_5e760fc1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; 
+}
+
+.background-section h1 {
+    margin-top: 150px;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.background-section p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ffffff;
+}
+
+.input-group button {
+    padding: 15px 20px;
+    border: 1px solid #e50914;
+    border-radius: 0 4px 4px 0;
+    background-color: #e50914;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #f6121d;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 200px;
+    height: 100px;
+}
+
+.signin-button .btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.signin-button .btn:hover {
+    background-color: #f40612;
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: #030303;
+    border-bottom: 8px solid rgb(43, 41, 41);
+
+}
+
+.section2 .container-text {
+    flex: 1;
+}
+
+.section2 .container-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section2 .container-text p {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.section2 .container-image img {
+    width: auto;
+    max-width: 100%;
+}
+
+.section4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: #030303;
+    border-bottom: 8px solid rgb(43, 41, 41);
+}
+
+.section4 .container-text {
+    flex: 1;
+}
+
+.section4 .container-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section4 .container-text p {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.section4 .container-image img {
+    width: auto;
+    max-width: 100%;
+}
+
+.section3, .section5, .section6 {
+    padding: 40px;
+    background: #030303;
+    border-bottom: 8px solid rgb(43, 41, 41);
+    height: 70vh;
+
+}
