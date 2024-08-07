@@ -19,7 +19,6 @@ body {
     padding: 0 20px;
     border-bottom: 8px solid rgb(43, 41, 41);
     background-color: rgba(0, 0, 0, 0.7); 
-
     overflow: hidden; 
 }
 
@@ -53,6 +52,7 @@ body {
     max-width: 600px;
     width: 100%;
     margin-top: 20px;
+    justify-content: center; 
 }
 
 .input-group input {
@@ -79,6 +79,7 @@ body {
 .input-group button:hover {
     background-color: #f6121d;
 }
+
 .navbar {
     width: 100%;
     display: flex;
@@ -116,67 +117,87 @@ body {
     background-color: #f40612;
 }
 
-.section2 {
+.section2, .section3, .section4, .section5, .section6 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background: #030303;
-    border-bottom: 8px solid rgb(43, 41, 41);
-
-}
-
-.section2 .container-text {
-    flex: 1;
-}
-
-.section2 .container-text h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.section2 .container-text p {
-    font-size: 1rem;
-    color: #b3b3b3;
-}
-
-.section2 .container-image img {
-    width: auto;
-    max-width: 100%;
-}
-
-.section4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background: #030303;
-    border-bottom: 8px solid rgb(43, 41, 41);
-}
-
-.section4 .container-text {
-    flex: 1;
-}
-
-.section4 .container-text h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.section4 .container-text p {
-    font-size: 1rem;
-    color: #b3b3b3;
-}
-
-.section4 .container-image img {
-    width: auto;
-    max-width: 100%;
-}
-
-.section3, .section5, .section6 {
+    justify-content: center;
     padding: 40px;
     background: #030303;
     border-bottom: 8px solid rgb(43, 41, 41);
     height: 70vh;
+}
 
+.section2 .container-text,
+.section3 .container-text,
+.section4 .container-text,
+.section5 .container-text,
+.section6 .container-text {
+    flex: 1;
+    max-width: 45%; 
+    padding: 0 20px;
+}
+
+.section2 .container-image,
+.section3 .container-image,
+.section4 .container-image,
+.section5 .container-image,
+.section6 .container-image {
+    flex: 1;
+    max-width: 45%; 
+    padding: 0 20px;
+    position: relative; 
+}
+
+.section2 .container-text h2,
+.section3 .container-text h2,
+.section4 .container-text h2,
+.section5 .container-text h2,
+.section6 .container-text h2 {
+    font-size: 47px;
+    line-height: 1.2em;
+    margin-bottom: 10px; 
+}
+
+.section2 .container-text p,
+.section3 .container-text p,
+.section4 .container-text p,
+.section5 .container-text p,
+.section6 .container-text p {
+    font-size: 22px;
+    line-height: 1.4em;
+    margin-bottom: 10px; 
+}
+
+.section2 .container-image img,
+.section3 .container-image img,
+.section4 .container-image img,
+.section5 .container-image img,
+.section6 .container-image img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    position: relative; 
+    z-index: 2; 
+}
+
+.video-background {
+    position: absolute;
+    top: 100;
+    left: 16%;
+    width: 68%;
+    height: 50%;
+    z-index: 1; 
+    pointer-events: none; 
+    object-fit: cover; 
+}
+
+.video-background-mobile {
+    position: absolute;
+    top: 130%;
+    left: 120%;
+    width: 58%;
+    height: 52%;
+    z-index: 1; 
+    pointer-events: none; 
+    object-fit: cover; 
 }
