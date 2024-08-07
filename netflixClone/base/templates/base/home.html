@@ -84,12 +84,128 @@
   </div>
 </section>
 
-<section class="section5">
-  <!-- Content for section 5 goes here -->
+<section class="section6">
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-item">
+      <div class="question">
+        What is Netflix?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries,
+        and more on thousands of internet-connected devices.
+        You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to 
+        discover and new TV shows and movies are added every week!
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="question">
+        How much does Netflix cost?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">
+        Where can I watch?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, 
+        streaming media players and game consoles.
+        You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without 
+        an internet connection. Take Netflix with you anywhere.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">
+        How do I cancel?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are 
+        no cancellation fees – start or stop your account anytime.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">
+        What can I watch on Netflix?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, 
+        and more. Watch as much as you want, anytime you want.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">
+        Is Netflix good for kids?
+        <span class="icon">+</span>
+      </div>
+      <div class="answer">
+        The Netflix Kids experience is included in your membership to give parents control while kids enjoy
+        family-friendly TV shows and movies in their own space.
+        Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch 
+        and block specific titles you don’t want kids to see.
+      </div>
+    </div>
+    
+  </div>
 </section>
 
-<section class="section6">
-  <!-- Content for section 6 goes here -->
+<section class="section7">
+  <div class="footer-container">
+    <div class="footer-links">
+      <div class="link-column">
+        <a href="#">FAQ</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Speed Test</a>
+      </div>
+      <div class="link-column">
+        <a href="#">Help Center</a>
+        <a href="#">Jobs</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Legal Notices</a>
+      </div>
+      <div class="link-column">
+        <a href="#">Account</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Only on Netflix</a>
+      </div>
+      <div class="link-column">
+        <a href="#">Media Center</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+    
+  </div>
 </section>
+
+
+<script>
+  document.querySelectorAll('.faq-item .question').forEach(question => {
+  question.addEventListener('click', () => {
+    const faqItem = question.parentElement;
+    faqItem.classList.toggle('active');
+  });
+});
+</script>
+
 
 {% endblock %}
