@@ -8,6 +8,7 @@ City Hall attachment Netflix Clone project
 
 1.  python extension pack in vscode
 2.  latest version of python (check all the boxes)
+3.  install django in the folder (if not)
 
 ### running the code
 
