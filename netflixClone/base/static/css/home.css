@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Netflix Sans", sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
   background-color: #030303;
 }
