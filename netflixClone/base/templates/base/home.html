@@ -10,219 +10,401 @@
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
   rel="stylesheet"
 />
+<body>
+  <section class="background-section">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="{% static 'images/Netflix_Logo_PMS.png' %}" alt="Logo" />
+        </div>
 
-<section class="background-section">
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <img src="{% static 'images/Netflix_Logo_PMS.png' %}" alt="Logo" />
+        <div class="signin-button">
+          <a href="{% url 'login' %}" class="btn">Sign In</a>
+        </div>
       </div>
-
-      <div class="signin-button">
-        <a href="{% url 'login' %}" class="btn">Sign In</a>
-      </div>
-    </div>
-  </nav>
-  <h1>Unlimited movies, TV shows, and more</h1>
-  <p>Watch anywhere. Cancel anytime.</p>
-  <p>Ready to watch? Enter your email to create or restart your membership.</p>
-  <div class="input-group">
-    <input type="email" placeholder="Email address" required />
-    <button type="submit" class="btn">Get Started</button>
-  </div>
-</section>
-
-<section class="section2 container-default">
-  <div class="container-text">
-    <h2>Enjoy on your TV.</h2>
+    </nav>
+    <h1>Unlimited movies, TV shows, and more</h1>
+    <p>Watch anywhere. Cancel anytime.</p>
     <p>
-      Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
-      players, and more.
+      Ready to watch? Enter your email to create or restart your membership.
     </p>
-  </div>
-  <div class="container-image container-default">
-    <img src="{% static 'images/tv.png' %}" alt="tv" />
-    <video autoplay muted loop class="video-background">
-      <source src="{% static 'videos/video-tv-0819.m4v' %}" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
+    <div class="input-group">
+      <input type="email" placeholder="Email address" required />
+      <button type="submit" class="btn">Get Started</button>
+    </div>
+  </section>
 
-<section class="section3 container-default">
-  <div class="container-image">
-    <img src="{% static 'images/mobile-0819.jpg' %}" alt="tv" />
-    <video autoplay muted loop class="video-background-mobile">
-      <source
-        src="{% static 'videos/video-devices-ke.m4v' %}"
-        type="video/mp4"
+  <section class="section2 container-default">
+    <div class="container-text">
+      <h2>Enjoy on your TV.</h2>
+      <p>
+        Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+        players, and more.
+      </p>
+    </div>
+    <div class="container-image container-default">
+      <img src="{% static 'images/tv.png' %}" alt="tv" />
+      <video autoplay muted loop class="video-background">
+        <source
+          src="{% static 'videos/video-tv-0819.m4v' %}"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="section3 container-default">
+    <div class="container-image">
+      <img src="{% static 'images/mobile-0819.jpg' %}" alt="tv" />
+      <video autoplay muted loop class="video-background-mobile">
+        <source
+          src="{% static 'videos/video-devices-ke.m4v' %}"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="container-text">
+      <h2>Download your shows to watch offline</h2>
+      <p>Save your favorites easily and always have something to watch.</p>
+    </div>
+  </section>
+
+  <section class="section4 container-default">
+    <div class="container-text">
+      <h2>Watch everywhere</h2>
+      <p>
+        Stream unlimited movies and TV shows on your phone, tablet, laptop, and
+        TV.
+      </p>
+    </div>
+    <div class="container-image">
+      <img src="{% static 'images/device-pile-ke.png' %}" alt="tv" />
+    </div>
+  </section>
+
+  <section class="section5 container-default">
+    <div class="container-image">
+      <img
+        src="{% static 'images/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooU.png' %}"
+        alt="tv"
       />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="container-text">
-    <h2>Download your shows to watch offline</h2>
-    <p>Save your favorites easily and always have something to watch.</p>
-  </div>
-</section>
+    </div>
+    <div class="container-text">
+      <h2>Create profiles for kids</h2>
+      <p>
+        Send kids on adventures with their favorite characters in a space made
+        just for them—free with your membership.
+      </p>
+    </div>
+  </section>
 
-<section class="section4 container-default">
-  <div class="container-text">
-    <h2>Watch everywhere</h2>
-    <p>
-      Stream unlimited movies and TV shows on your phone, tablet, laptop, and
-      TV.
-    </p>
-  </div>
-  <div class="container-image">
-    <img src="{% static 'images/device-pile-ke.png' %}" alt="tv" />
-  </div>
-</section>
+  {% comment %}
+  <section class="section6">
+    <div class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+      <div class="faq-item">
+        <div class="question">
+          What is Netflix?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          Netflix is a streaming service that offers a wide variety of
+          award-winning TV shows, movies, anime, documentaries, and more on
+          thousands of internet-connected devices. You can watch as much as you
+          want, whenever you want without a single commercial – all for one low
+          monthly price. There's always something new to discover and new TV
+          shows and movies are added every week!
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="question">
+          How much does Netflix cost?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+          streaming device, all for one fixed monthly fee. Plans range from
+          $8.99 to $17.99 a month. No extra costs, no contracts.
+        </div>
+      </div>
 
-<section class="section5 container-default">
-  <div class="container-image">
-    <img
-      src="{% static 'images/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooU.png' %}"
-      alt="tv"
-    />
-  </div>
-  <div class="container-text">
-    <h2>Create profiles for kids</h2>
-    <p>
-      Send kids on adventures with their favorite characters in a space made
-      just for them—free with your membership.
-    </p>
-  </div>
-</section>
+      <div class="faq-item">
+        <div class="question">
+          Where can I watch?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          Watch anywhere, anytime. Sign in with your Netflix account to watch
+          instantly on the web at netflix.com from your personal computer or on
+          any internet-connected device that offers the Netflix app, including
+          smart TVs, smartphones, tablets, streaming media players and game
+          consoles. You can also download your favorite shows with the iOS or
+          Android app. Use downloads to watch while you're on the go and without
+          an internet connection. Take Netflix with you anywhere.
+        </div>
+      </div>
 
-<section class="section6">
-  <div class="faq-container">
+      <div class="faq-item">
+        <div class="question">
+          How do I cancel?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          Netflix is flexible. There are no pesky contracts and no commitments.
+          You can easily cancel your account online in two clicks. There are no
+          cancellation fees – start or stop your account anytime.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">
+          What can I watch on Netflix?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          Netflix has an extensive library of feature films, documentaries, TV
+          shows, anime, award-winning Netflix originals, and more. Watch as much
+          as you want, anytime you want.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">
+          Is Netflix good for kids?
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          The Netflix Kids experience is included in your membership to give
+          parents control while kids enjoy family-friendly TV shows and movies
+          in their own space. Kids profiles come with PIN-protected parental
+          controls that let you restrict the maturity rating of content kids can
+          watch and block specific titles you don’t want kids to see.
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endcomment %}
+
+  <div class="faq">
     <h1>Frequently Asked Questions</h1>
-    <div class="faq-item">
+    <div class="questions">
       <div class="question">
-        What is Netflix?
-        <span class="icon">+</span>
+        <input type="checkbox" id="q1" />
+        <label class="header" for="q1">
+          What is Netflix?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          Netflix is a streaming service that offers a wide variety of
+          award-winning TV shows, movies, anime, documentaries, and more on
+          thousands of internet-connected devices. <br /><br />
+          You can watch as much as you want, whenever you want without a single
+          commercial – all for one low monthly price. There's always something
+          new to discover and new TV shows and movies are added every week!
+        </div>
       </div>
-      <div class="answer">
-        Netflix is a streaming service that offers a wide variety of
-        award-winning TV shows, movies, anime, documentaries, and more on
-        thousands of internet-connected devices. You can watch as much as you
-        want, whenever you want without a single commercial – all for one low
-        monthly price. There's always something new to discover and new TV shows
-        and movies are added every week!
+      <div class="question">
+        <input type="checkbox" id="q2" />
+        <label class="header" for="q2">
+          How much does Netflix cost?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+          streaming device, all for one fixed monthly fee. Plans range from Ksh
+          200 to Ksh 1,100 a month. No extra costs, no contracts.
+        </div>
+      </div>
+      <div class="question">
+        <input type="checkbox" id="q3" />
+        <label class="header" for="q3">
+          Where can I watch?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          Watch anywhere, anytime. Sign in with your Netflix account to watch
+          instantly on the web at netflix.com from your personal computer or on
+          any internet-connected device that offers the Netflix app, including
+          smart TVs, smartphones, tablets, streaming media players and game
+          consoles. <br />
+          <br />You can also download your favorite shows with the iOS or
+          Android app. Use downloads to watch while you're on the go and without
+          an internet connection. Take Netflix with you anywhere
+        </div>
+      </div>
+      <div class="question">
+        <input type="checkbox" id="q4" />
+        <label class="header" for="q4">
+          How do I cancel?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          Netflix is flexible. There are no pesky contracts and no commitments.
+          You can easily cancel your account online in two clicks. There are no
+          cancellation fees – start or stop your account anytime.
+        </div>
+      </div>
+      <div class="question">
+        <input type="checkbox" id="q5" />
+        <label class="header" for="q5">
+          What can I watch on Netflix?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          Netflix has an extensive library of feature films, documentaries, TV
+          shows, anime, award-winning Netflix originals, and more. Watch as much
+          as you want, anytime you want.
+        </div>
+      </div>
+      <div class="question">
+        <input type="checkbox" id="q6" />
+        <label class="header" for="q6">
+          Is Netflix good for kids?
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+        <div class="answer">
+          The Netflix Kids experience is included in your membership to give
+          parents control while kids enjoy family-friendly TV shows and movies
+          in their own space.<br /><br />
+          Kids profiles come with PIN-protected parental controls that let you
+          restrict the maturity rating of content kids can watch and block
+          specific titles you don’t want kids to see.
+        </div>
       </div>
     </div>
-    <div class="faq-item">
-      <div class="question">
-        How much does Netflix cost?
-        <span class="icon">+</span>
-      </div>
-      <div class="answer">
-        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming
-        device, all for one fixed monthly fee. Plans range from $8.99 to $17.99
-        a month. No extra costs, no contracts.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="question">
-        Where can I watch?
-        <span class="icon">+</span>
-      </div>
-      <div class="answer">
-        Watch anywhere, anytime. Sign in with your Netflix account to watch
-        instantly on the web at netflix.com from your personal computer or on
-        any internet-connected device that offers the Netflix app, including
-        smart TVs, smartphones, tablets, streaming media players and game
-        consoles. You can also download your favorite shows with the iOS or
-        Android app. Use downloads to watch while you're on the go and without
-        an internet connection. Take Netflix with you anywhere.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="question">
-        How do I cancel?
-        <span class="icon">+</span>
-      </div>
-      <div class="answer">
-        Netflix is flexible. There are no pesky contracts and no commitments.
-        You can easily cancel your account online in two clicks. There are no
-        cancellation fees – start or stop your account anytime.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="question">
-        What can I watch on Netflix?
-        <span class="icon">+</span>
-      </div>
-      <div class="answer">
-        Netflix has an extensive library of feature films, documentaries, TV
-        shows, anime, award-winning Netflix originals, and more. Watch as much
-        as you want, anytime you want.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="question">
-        Is Netflix good for kids?
-        <span class="icon">+</span>
-      </div>
-      <div class="answer">
-        The Netflix Kids experience is included in your membership to give
-        parents control while kids enjoy family-friendly TV shows and movies in
-        their own space. Kids profiles come with PIN-protected parental controls
-        that let you restrict the maturity rating of content kids can watch and
-        block specific titles you don’t want kids to see.
-      </div>
+    <p>
+      Ready to watch? Enter your email to create or resatrt your membership.
+    </p>
+    <div class="input-group">
+      <input type="email" placeholder="Email address" required />
+      <button type="submit" class="btn">Get Started</button>
     </div>
   </div>
-</section>
 
-<section class="section7">
-  <div class="footer-container">
-    <div class="footer-links">
-      <div class="link-column">
-        <a href="#">FAQ</a>
-        <a href="#">Investor Relations</a>
-        <a href="#">Privacy</a>
-        <a href="#">Speed Test</a>
+  <section class="section7">
+    <div class="footer-container">
+      <div class="footer-links">
+        <div class="link-column">
+          <a href="#">FAQ</a>
+          <a href="#">Investor Relations</a>
+          <a href="#">Privacy</a>
+          <a href="#">Speed Test</a>
+        </div>
+        <div class="link-column">
+          <a href="#">Help Center</a>
+          <a href="#">Jobs</a>
+          <a href="#">Cookie Preferences</a>
+          <a href="#">Legal Notices</a>
+        </div>
+        <div class="link-column">
+          <a href="#">Account</a>
+          <a href="#">Ways to Watch</a>
+          <a href="#">Corporate Information</a>
+          <a href="#">Only on Netflix</a>
+        </div>
+        <div class="link-column">
+          <a href="#">Media Center</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact Us</a>
+        </div>
       </div>
-      <div class="link-column">
-        <a href="#">Help Center</a>
-        <a href="#">Jobs</a>
-        <a href="#">Cookie Preferences</a>
-        <a href="#">Legal Notices</a>
-      </div>
-      <div class="link-column">
-        <a href="#">Account</a>
-        <a href="#">Ways to Watch</a>
-        <a href="#">Corporate Information</a>
-        <a href="#">Only on Netflix</a>
-      </div>
-      <div class="link-column">
-        <a href="#">Media Center</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Contact Us</a>
+      <div class="footer-social">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
       </div>
     </div>
-    <div class="footer-social">
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-youtube"></i>
-    </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  document.querySelectorAll(".faq-item .question").forEach((question) => {
-    question.addEventListener("click", () => {
-      const faqItem = question.parentElement;
-      faqItem.classList.toggle("active");
+  <script>
+    document.querySelectorAll(".faq-item .question").forEach((question) => {
+      question.addEventListener("click", () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle("active");
+      });
     });
-  });
-</script>
+  </script>
+</body>
 
 {% endblock %}

@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
+  background-color: #030303;
 }
 
 .background-section {
@@ -206,7 +207,7 @@ body {
   object-fit: cover;
 }
 
-.faq-container {
+/* .faq-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -249,7 +250,7 @@ body {
 
 .faq-item.active .icon {
   transform: rotate(45deg);
-}
+} */
 .section7 {
   background-color: #000000;
   color: #757575;
@@ -303,4 +304,65 @@ body {
 
 .footer-service {
   margin-bottom: 20px;
+}
+/* faq remod */
+.faq {
+  background: #030303;
+  padding: 70px 30px;
+}
+.faq h1 {
+  font-size: 3.125rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.questions {
+  max-width: 635px;
+  margin: 0 auto;
+  font-size: 1.625rem;
+}
+.question {
+  position: relative;
+  background-color: #303030;
+  margin-bottom: 10px;
+}
+.question .header {
+  display: block;
+  padding: 20px 30px;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.question svg {
+  width: 30px;
+  height: 30px;
+  right: 30px;
+  top: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  transition: all 0.2s ease;
+}
+.question .answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.question input[type="checkbox"] {
+  display: none;
+}
+.question input[type="checkbox"]:checked ~ .answer {
+  padding: 30px 30px;
+  max-height: 600px;
+}
+.question input[type="checkbox"]:checked ~ .header svg {
+  transform: rotate(0deg);
+}
+.faq p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+}
+
+.faq .input-group {
+  margin: 0 auto;
 }
