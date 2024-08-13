@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
+    />
+    <title>Netflix Login Clone</title>
+    {% load static %}
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Netflix Sans", sans-serif;
+      }
+      .body-container {
+        background: url("{% static 'images/KE-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_5e760fc1.jpg' %}")
+          no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 100vh;
+        margin: 0;
+        position: relative;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .navbar {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        position: relative;
+        top: 0;
+        z-index: 2;
+      }
+
+      .navbar-container {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo svg {
+        width: 9.25rem;
+        height: 2.5rem;
+        color: rgb(229, 9, 20);
+        fill: currentColor;
+        margin: 0 auto;
+      }
+
+      .login-container {
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 45px;
+        padding-bottom: 100px;
+        border-radius: 4px;
+        margin-top: 5px;
+        width: 100%;
+        margin-left: 35%;
+        max-width: 450px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-container h1 {
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .login-container input {
+        margin-bottom: 20px;
+        padding: 16px;
+        margin-right: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        /* width: 80%; */
+        height: 20%;
+        margin-left: 20px;
+        border: 1px solid rgb(109, 105, 105);
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+      }
+
+      .login-container button {
+        padding: 16px;
+        background-color: #e50914;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        width: 90%;
+        margin-left: 20px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .login-container button:hover {
+        background-color: #f6121d;
+      }
+
+      .signin-code-button {
+        background-color: rgba(128, 128, 128, 0.5);
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 16px;
+        border-radius: 4px;
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+
+      .signin-code-button:hover {
+        background-color: rgba(128, 128, 128, 0.7);
+      }
+
+      .login-container .form-check {
+        display: flex;
+        font-size: 14px;
+        color: #b3b3b3;
+        margin-bottom: 2px;
+      }
+
+      .login-container .form-check label {
+        margin-left: 2px;
+      }
+      .login-container .form-check input {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .login-container .forgot-password {
+        text-align: center;
+        font-size: 14px;
+        color: #b3b3b3;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .login-container .forgot-password a {
+        font-size: 14px;
+        color: #b3b3b3;
+        text-decoration: none;
+      }
+
+      .login-container .help-text {
+        color: #b3b3b3;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+
+      .login-container .help-text a {
+        color: #b3b3b3;
+        text-decoration: none;
+      }
+
+      .login-container .help-text a:hover {
+        text-decoration: underline;
+      }
+      .or {
+        text-align: center;
+        font-size: 17px;
+        font-weight: normal;
+        color: #b3b3b3;
+      }
+      .form-check-label {
+        margin-right: -600px;
+      }
+      .footer {
+        background-color: black;
+        color: #b3b3b3;
+        padding: 120px 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+      }
+
+      .footer .footer-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+      }
+
+      .footer .footer-section div {
+        flex: 1;
+        /* text-align: center; */
+        margin: 0 10px;
+        font-size: 14px;
+      }
+      .footer-list {
+        line-height: 2.4em;
+      }
+      .footer .language-dropdown {
+        display: inline-flex;
+        border: 1px solid #b3b3b3;
+        padding: 10px 55px;
+        margin: 25px;
+        border-radius: 4px;
+        color: #b3b3b3;
+        cursor: pointer;
+      }
+
+      .footer .language-dropdown select {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 14px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      .footer .language-dropdown select:focus {
+        outline: none;
+      }
+
+      .footer .language-dropdown i {
+        margin-left: 5px;
+      }
+
+      .footer .footer-section div a {
+        color: #b3b3b3;
+        text-decoration: underline;
+        font-size: 16px;
+      }
+      .footer .footer-section div p {
+        color: #b3b3b3;
+        font-size: 16px;
+      }
+
+      .footer .footer-section div a:hover {
+        text-decoration: underline;
+      }
+
+      .footer .footer-bottom {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="overlay"></div>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo">
+            <a href="{% url 'home' %}">
+              <svg
+                viewBox="0 0 111 30"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+              >
+                <g>
+                  <path
+                    d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="login-container">
+        <h1>Sign In</h1>
+        <form  method="POST">
+          {% csrf_token%}
+          {{form.as_p}}
+          {% csrf_token %} 
+          <button type="submit">Sign Up</button>
+          
+        </form>
+       
+      </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="footer">
+      <div class="footer-section">
+        <div class="footer-list">
+          <p>Questions? Contact us.</p>
+          <p><a href="#">FAQ</a></p>
+          <p><a href="#">Cookie Preferences</a></p>
+          <div
+            class="language-dropdown"
+            style="margin-top: 20px; margin-left: 1px"
+          >
+            <select>
+              <option value="english">English</option>
+            </select>
+            <i class="fas fa-globe"></i>
+          </div>
+        </div>
+        <div style="padding-top: 30px; line-height: 2.4em">
+          <p><a href="#">Help Center</a></p>
+          <p><a href="#">Corporate Information</a></p>
+        </div>
+
+        <div style="padding-top: 30px; line-height: 2.4em">
+          <p><a href="#">Terms of Use</a></p>
+        </div>
+        <div style="padding-top: 30px; line-height: 2.4em">
+          <p><a href="#">Privacy</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

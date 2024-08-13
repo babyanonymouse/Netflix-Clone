@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -302,8 +304,9 @@
 
       <div class="login-container">
         <h1>Sign In</h1>
-        <form method="POST">
-          {% csrf_token %} {{ form.username }} {{ form.password }}
+        <form action= "{% url 'login' %}" method="POST">
+          {{form.as_p}}
+          {% csrf_token %} 
           <button type="submit">Sign In</button>
           <h2 class="or">OR</h2>
           <button
@@ -324,7 +327,7 @@
           </div>
         </form>
         <div class="help-text">
-          <span>New to Netflix? <a href="#">Sign up now.</a></span>
+          <span>New to Netflix? <a href="/signup">Sign up now.</a></span>
           <br /><br />
           <span
             >This page is protected by Google reCAPTCHA to ensure you're not a
