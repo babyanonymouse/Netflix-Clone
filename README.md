@@ -4,6 +4,8 @@ City Hall attachment Netflix Clone project
 
 ## NOTICE
 
+- make sure to sync changes to update the codes before adding mods
+
 ### Prequisites
 
 1.  python extension pack in vscode
@@ -12,9 +14,10 @@ City Hall attachment Netflix Clone project
     - `pip install django` - Windows
     - `sudo apt install python3-django`- Linux
 
-### running the code
+### Modifying/running the Site
 
-Activate virtual environment - `source myenv/bin/activate`
-`cd netflixClone` - change directory to main directory
-(windows) `python manage.py runserver` - start the server
-(linux) `python3 manage.py runserver`
+- Activate virtual environment - `source myenv/bin/activate`
+- `cd netflixClone` - change directory to main directory
+- start the server
+  - (windows) `python manage.py runserver`
+  - (linux) `python3 manage.py runserver`

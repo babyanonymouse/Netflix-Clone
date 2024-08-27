@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {%load static%}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <img src="{% static 'images/Netflix_Logo_PMS.png' %}" alt="Logo" width="200px" height="100px">
-            </div>
-            <div class="signin-button">
-                <a href="{% url 'login' %}" class="btn">Sign In</a>
-            </div>
+      <div class="navbar-container">
+        <div class="logo">
+          <img
+            src="{% static 'images/Netflix_Logo_PMS.png' %}"
+            alt="Logo"
+            width="200px"
+            height="100px"
+          />
         </div>
+        <div class="signin-button">
+          <a href="{% url 'login' %}" class="btn">Sign In</a>
+        </div>
+      </div>
     </nav>
-    {%block content%}
-    {%endblock%}
-</body>
+    {%block content%} {%endblock%}
+  </body>
 </html>
